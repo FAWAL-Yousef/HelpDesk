@@ -1,0 +1,200 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Idiqlat:wght@200;300;400&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --primary-color: #5d265d;
+}
+
+*{
+
+box-sizing: border-box;
+  font-family: "Idiqlat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
+body{
+    /*background: linear-gradient(78deg,rgba(238, 174, 202, 1) 0%, rgba(93, 38, 93, 1) 89%);  Gradiant*/ 
+    color: var(--primary-color);
+    background-image: url(Images/Background_Image.jpg);
+    background-size: cover;
+}
+
+body::selection{
+    background: #8a438a;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    border-color: var(--primary-color);
+    box-shadow: 5px 10px var(--primary-color);
+    border-radius: 25px;
+
+}
+
+fieldset{
+        background-color: #f6f7f9;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: inherit;
+
+    
+}
+h1{
+    text-align: center; 
+}
+
+
+
+input{
+    background-color: #d9ccd6;
+    width: 80%;
+    border: 2px solid #d9ccd6;
+    padding-left: 5px;
+}
+
+input[type="text"]{
+    border-radius: 5px;
+}
+
+
+
+input:focus , input:hover  {
+  outline: none; /* removes browser default focus outline */
+  animation: border-pulsate 1s infinite ;
+}
+
+
+#divBirthday{
+    display: flex;
+    width: 80%;
+}
+
+#birthday{
+    width: 100%;
+}
+
+#labelBirthday{
+    width: 40%;
+}
+
+#divInfo{
+    margin-left: 3.5vw;
+    width: 100%;
+
+}
+
+
+p{
+    color: #ea4258;
+    font-size: 12px;
+    padding-left: 5px
+
+}
+
+a{
+    display: inline-block;
+    font-size: 12px;
+    width: 47%;
+    text-decoration-line: none;
+    text-align: center;
+    color: var(--primary-color);
+    transition: margin-right 0.5s ease-out;
+    padding: 0;
+
+}
+a:hover{
+    margin-right: 2rem;
+}
+
+
+#divLink{
+    display: flex;
+    width: 80%;
+    justify-content: right;
+}
+
+
+
+#birthdayErreur{
+    width: 80%;
+    text-align: center;
+    padding-left: 0px;
+
+}
+
+#btCreateAccount{
+    background-color:var(--primary-color);
+    color: #fcfcfc;
+    margin-bottom: 2vh;
+    border-width: 2px;
+    border-color: var(--primary-color);
+    border-style: outset;
+    border-radius: 20px;
+
+}
+
+#btCreateAccount:hover{
+    box-shadow:0 3px 3px 0 rgba(0,0,0,0.6);
+    animation: border-pulsate 1s infinite ;
+
+    
+
+}
+
+#btCreateAccount:active{
+    background: linear-gradient(78deg,rgba(238, 174, 202, 1) 0%, rgba(93, 38, 93, 1) 89%);
+}
+
+#containerLogin{
+    width:  30rem;
+    height: 50rem;
+    display:grid;          
+    grid-template-rows: 15rem 1fr;
+   margin: auto;
+
+}
+
+#imgLogo{
+    width: 45%;
+    height: 80%;
+    position: relative;
+    left: 8rem;
+    top: 3rem;
+    overflow: hidden;
+}
+#imgContainer{
+    width: 100%;    
+    
+}
+
+
+
+@keyframes border-pulsate {
+    0%   { border-color: #9ba6db; }
+    50%  { border-color: #6fb2c2; }
+    100% { border-color: #9ba6db; }
+}

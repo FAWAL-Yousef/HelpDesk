@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang=en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HelpDesk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CreationCompteEtudiant .css">
+    <link rel="icon" type="image/png" href="Images/logo.png" sizes="32x32" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="containerLogin">
+
+
+        <div id="imgContainer">
+            <img src="Images/logo.png" alt="logo" id="imgLogo">
+        </div>
+
+
+        <form action="" method="post" onsubmit="return checkForm()">
+
+            <fieldset>
+                <h1>Create your student account</h1>
+
+                <div id="divInfo">
+
+                    <input type="text" name="firstName" id="firstName" placeholder="First name">
+                    <p id="firstNameErreur">Problème</p>
+
+
+                    <input type="text" name="lastName" id="lastName" placeholder="Last name">
+                    <p id="lastNameErreur"></p>
+
+                    <input type="text" name="tel" id="tel" placeholder="Tel">
+                    <p id="telErreur"></p>
+
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <p id="emailErreur"></p>
+
+                    <input type="text" name="password" id="password" placeholder="Password">
+                    <p id="passwordErreur"></p>
+
+                    <div id="divBirthday">
+                        <label for="birthday" id="labelBirthday">Birthday</label>
+                        <input type="date" name="birthday" id="birthday">
+
+                    </div>
+                    <p id="birthdayErreur">Veuillez choisir une date de naissance valide</p>
+
+                    <input type="submit" value="Créer mon compte" id="btCreateAccount">
+                    <div id="divLink">
+                        <a href=""> Vous avez déja un compte ?<br> Connectez-vous</a>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </fieldset>
+
+        </form>
+
+    </div>
+</body>
+<script src="CreationCompteEtudiant.js"></script>
+
+</html>
