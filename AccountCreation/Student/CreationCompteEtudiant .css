@@ -55,11 +55,12 @@ form{
 }
 
 fieldset{
-        background-color: #f6f7f9;
+    background-color: #f6f7f9;
     height: 100%;
     padding: 0;
     margin: 0;
     border-radius: inherit;
+    border-style: inherit;
 
     
 }
@@ -78,6 +79,7 @@ input{
 
 input[type="text"]{
     border-radius: 5px;
+    color: #6fb2c2;
 }
 
 
@@ -102,39 +104,43 @@ input:focus , input:hover  {
 }
 
 #divInfo{
-    margin-left: 3.5vw;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-
+    align-items: center;
+    gap : 10px;
 }
 
+.divErreurLeft{
+    width: 80%;
+}
 
 p{
     color: #ea4258;
     font-size: 12px;
-    padding-left: 5px
-
+    padding-left: 5px;
+    margin: -6px 0px;
 }
 
 a{
     display: inline-block;
     font-size: 12px;
-    width: 47%;
+    width: 70%;
     text-decoration-line: none;
-    text-align: center;
+    text-align: right;
     color: var(--primary-color);
     transition: margin-right 0.5s ease-out;
-    padding: 0;
-
 }
 a:hover{
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 
 #divLink{
-    display: flex;
+
     width: 80%;
-    justify-content: right;
+    text-align: right;
+    margin-top: -12px;
 }
 
 
@@ -171,9 +177,9 @@ a:hover{
 
 #containerLogin{
     width:  30rem;
-    height: 50rem;
+    height: 52rem;
     display:grid;          
-    grid-template-rows: 15rem 1fr;
+    grid-template-rows: 13rem 1fr;
    margin: auto;
 
 }
