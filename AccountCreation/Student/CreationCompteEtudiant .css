@@ -41,9 +41,6 @@ body{
     background-size: cover;
 }
 
-body::selection{
-    background: #8a438a;
-}
 
 form{
     width: 100%;
@@ -79,7 +76,6 @@ input{
 
 input[type="text"]{
     border-radius: 5px;
-    color: #6fb2c2;
 }
 
 
@@ -177,7 +173,7 @@ a:hover{
 
 #containerLogin{
     width:  30rem;
-    height: 52rem;
+    height: 50rem;
     display:grid;          
     grid-template-rows: 13rem 1fr;
    margin: auto;
