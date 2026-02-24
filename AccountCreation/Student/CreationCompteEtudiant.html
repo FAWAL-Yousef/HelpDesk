@@ -19,7 +19,7 @@
         </div>
 
 
-        <form action="" method="post" onsubmit="return checkForm()">
+        <form id="Form" name="Form">
 
             <fieldset>
                 <h1>Create your student account</h1>
@@ -28,27 +28,31 @@
 
                     <input type="text" name="firstName" id="firstName" placeholder="First name">
                     <div class="divErreurLeft">
-                        <p id="firstNameErreur">Problème</p>
+                        <p id="firstNameError"></p>
                     </div>
 
                     <input type="text" name="lastName" id="lastName" placeholder="Last name">
                     <div class="divErreurLeft">
-                        <p id="lastNameErreur"></p>
+                        <p id="lastNameError"></p>
                     </div>
 
                     <input type="text" name="tel" id="tel" placeholder="Tel" autocomplete="tel">
                     <div class="divErreurLeft">
-                        <p id="telErreur"></p>
+                        <p id="telError"></p>
                     </div>
 
                     <input type="text" name="email" id="email" placeholder="Email" autocomplete="email">
                     <div class="divErreurLeft">
-                        <p id="emailErreur"></p>
+                        <p id="emailError"></p>
                     </div>
 
                     <input type="text" name="password" id="password" placeholder="Password">
-                    <div class="divErreurLeft">
-                        <p id="passwordErreur"></p>
+                    <div class="divErrorLeft">
+                        <p id="passwordError">
+                        <ul>
+                        </ul>
+                        </p>
+
                     </div>
 
                     <div id="divBirthday">
@@ -56,7 +60,7 @@
                         <input type="date" name="birthday" id="birthday">
 
                     </div>
-                    <p id="birthdayErreur">Veuillez choisir une date de naissance valide</p>
+                    <p id="birthdayError"></p>
 
                     <input type="submit" value="Créer mon compte" id="btCreateAccount">
                     <div id="divLink">

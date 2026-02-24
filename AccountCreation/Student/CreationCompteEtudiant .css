@@ -35,7 +35,6 @@ html, body {
 
 
 body{
-    /*background: linear-gradient(78deg,rgba(238, 174, 202, 1) 0%, rgba(93, 38, 93, 1) 89%);  Gradiant*/ 
     color: var(--primary-color);
     background-image: url(Images/Background_Image.jpg);
     background-size: cover;
@@ -97,25 +96,40 @@ input:focus , input:hover  {
 
 #labelBirthday{
     width: 40%;
-}
+}   
 
 #divInfo{
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
     gap : 10px;
+    margin-left: 3rem;
 }
 
-.divErreurLeft{
+.divErrorLeft{
     width: 80%;
 }
 
 p{
     color: #ea4258;
-    font-size: 12px;
+    font-size: 11px;
     padding-left: 5px;
     margin: -6px 0px;
+}
+
+#birthdayError{
+    margin-left: 8.3rem;
+}
+
+ul{
+    margin: -6px 0;
+}
+li{
+    color: #ea4258;
+    font-size: 11px;
+    margin: -6px 0px;
+    padding-left: 5px;
 }
 
 a{
@@ -140,13 +154,6 @@ a:hover{
 }
 
 
-
-#birthdayErreur{
-    width: 80%;
-    text-align: center;
-    padding-left: 0px;
-
-}
 
 #btCreateAccount{
     background-color:var(--primary-color);
@@ -192,6 +199,18 @@ a:hover{
     width: 100%;    
     
 }
+
+
+
+.error{
+    border-color: #ea4258;
+}
+
+.correct{
+    border-color: #48e596;
+}
+
+
 
 
 
