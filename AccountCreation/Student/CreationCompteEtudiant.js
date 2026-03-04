@@ -16,7 +16,29 @@ const fields = {
   email: document.querySelector("#email"),
   password: document.querySelector("#password"),
   birthday: document.querySelector("#birthday"),
+  password_requirements_liste: document.querySelector(
+    "#password_requirements_list",
+  ),
 };
+
+const password_requirements =
+  fields.password_requirements_liste.querySelectorAll("li");
+
+fields.password.addEventListener("input", () => {
+  const passwordValue = fields.password.value;
+
+  const lengthCond = passwordValue.length >= 8;
+  const upperCond = /[A-Z]/.test(passwordValue);
+  const specialCond = /[!@#$%^&*(),.?":{}|<>]/.test(passwordValue);
+  const numberCond = /\d/.test(passwordValue);
+
+  const conditions = [lengthCond, upperCond, specialCond, numberCond];
+
+  password_requirements.forEach((el, index) => {
+    el.classList.toggle("valid_requirement", conditions[index]);
+    el.classList.toggle("invalid_requirement", !conditions[index]);
+  });
+});
 
 const errors = {
   firstName: document.querySelector("#firstNameError"),
@@ -45,7 +67,7 @@ Object.values(fields).forEach((input) => {
 function setValidation(input, errorEl, condition, message) {
   if (!condition) {
     input.classList.add("error");
-    errorEl.innerHTML = message;
+    errorEl.textContent = message;
     return false;
   }
 
@@ -55,7 +77,7 @@ function setValidation(input, errorEl, condition, message) {
 }
 
 /*
- * Age calculation (accurate)
+ * Age calculation
  */
 function calculateAge(birthDate) {
   const today = new Date();
@@ -143,30 +165,21 @@ function checkForm() {
    */
   const passwordValue = fields.password.value;
 
-  const numberCond = /\d/.test(passwordValue);
-  const upperCond = /[A-Z]/.test(passwordValue);
-  const specialCond = /[\W_]/.test(passwordValue);
   const lengthCond = passwordValue.length >= 8;
+  const upperCond = /[A-Z]/.test(passwordValue);
+  const specialCond = /[!@#$%^&*(),.?":{}|<>]/.test(passwordValue);
+  const numberCond = /\d/.test(passwordValue);
+
+  const conditions = [lengthCond, upperCond, specialCond, numberCond];
+
+  password_requirements.forEach((el, index) => {
+    el.classList.toggle("valid_requirement", conditions[index]);
+    el.classList.toggle("invalid_requirement", !conditions[index]);
+  });
 
   const validPassword = numberCond && upperCond && specialCond && lengthCond;
 
-  const passwordMessage = `
-    Password requirements:
-    <ul>
-      <li>At least 1 uppercase letter</li>
-      <li>At least 1 special character</li>
-      <li>At least 1 number</li>
-      <li>Minimum 8 characters long</li>
-    </ul>
-  `;
-
-  ok =
-    setValidation(
-      fields.password,
-      errors.password,
-      validPassword,
-      passwordMessage,
-    ) && ok;
+  ok = setValidation(fields.password, errors.password, validPassword, "") && ok;
 
   /*
    * Birthday (16-120 years old)

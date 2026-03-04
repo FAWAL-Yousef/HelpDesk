@@ -28,28 +28,32 @@
 
                     <input type="text" name="firstName" id="firstName" placeholder="First name">
                     <div class="divErreurLeft">
-                        <p id="firstNameError"></p>
+                        <p id="firstNameError" class="invalid_requirement"></p>
                     </div>
 
                     <input type="text" name="lastName" id="lastName" placeholder="Last name">
                     <div class="divErreurLeft">
-                        <p id="lastNameError"></p>
+                        <p id="lastNameError" class="invalid_requirement"></p>
                     </div>
 
                     <input type="text" name="tel" id="tel" placeholder="Tel" autocomplete="tel">
                     <div class="divErreurLeft">
-                        <p id="telError"></p>
+                        <p id="telError" class="invalid_requirement"></p>
                     </div>
 
                     <input type="text" name="email" id="email" placeholder="Email" autocomplete="email">
                     <div class="divErreurLeft">
-                        <p id="emailError"></p>
+                        <p id="emailError" class="invalid_requirement"></p>
                     </div>
 
                     <input type="text" name="password" id="password" placeholder="Password">
                     <div class="divErrorLeft">
                         <p id="passwordError">
-                        <ul>
+                        <ul id="password_requirements_list">
+                            <li>Minimum 8 characters long</li>
+                            <li>At least 1 uppercase letter</li>
+                            <li>At least 1 special character</li>
+                            <li>At least 1 number</li>
                         </ul>
                         </p>
 
@@ -60,13 +64,13 @@
                         <input type="date" name="birthday" id="birthday">
 
                     </div>
-                    <p id="birthdayError"></p>
+                    <p id="birthdayError" class="invalid_requirement"></p>
 
                     <input type="submit" value="Créer mon compte" id="btCreateAccount">
                     <div id="divLink">
-                        <a href=""> Avez-vous déjà un compte ? Connectez-vous</a>
-                        <a href=""> Faites-vous partie de l'administration ?</a>
-                        <a href=""> Êtes-vous Tuteur ?</a>
+                        <a href=""> Do you already have an account ? login</a>
+                        <a href=""> Are you part of the administraton?</a>
+                        <a href=""> Are you a tutor ?</a>
                     </div>
 
 

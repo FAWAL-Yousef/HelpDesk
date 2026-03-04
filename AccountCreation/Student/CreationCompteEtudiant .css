@@ -5,6 +5,8 @@
 
 :root{
     --primary-color: #5d265d;
+    --error-color: #ea4258;
+    --correct-color: #48e596;
 }
 
 *{
@@ -81,7 +83,7 @@ input[type="text"]{
 
 input:focus , input:hover  {
   outline: none; /* removes browser default focus outline */
-  animation: border-pulsate 1s infinite ;
+  animation: border-pulsate 2s infinite ;
 }
 
 
@@ -112,10 +114,13 @@ input:focus , input:hover  {
 }
 
 p{
-    color: #ea4258;
     font-size: 11px;
     padding-left: 5px;
     margin: -6px 0px;
+}
+
+#passwordError{
+    color: var(--primary-color);
 }
 
 #birthdayError{
@@ -126,7 +131,7 @@ ul{
     margin: -6px 0;
 }
 li{
-    color: #ea4258;
+    color: var(--primary-color);
     font-size: 11px;
     margin: -6px 0px;
     padding-left: 5px;
@@ -202,14 +207,23 @@ a:hover{
 
 
 
-.error{
-    border-color: #ea4258;
-}
-
 .correct{
-    border-color: #48e596;
+    border-color: var(--correct-color);
 }
 
+
+.error{
+    border-color: var(--error-color);
+}
+
+.valid_requirement{
+    color : var(--correct-color)
+}
+
+
+.invalid_requirement{
+    color :var(--error-color)
+}
 
 
 
