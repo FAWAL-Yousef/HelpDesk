@@ -2,11 +2,8 @@
    accueil.js — Scripts de la page d'accueil HelpDesk
 ══════════════════════════════════════════════════════════════ */
 
-/* ──────────────────────────────────────────
-   1. SCROLL REVEAL
-   Anime l'apparition des éléments .appear
-   au fur et à mesure que l'utilisateur scrolle
-────────────────────────────────────────── */
+/*  SCROLL REVEAL
+ */
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -21,11 +18,8 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll(".appear").forEach((el) => revealObserver.observe(el));
 
-/* ──────────────────────────────────────────
-   2. COMPTEURS ANIMÉS
-   Fait monter les chiffres de 0 jusqu'à
-   la valeur définie dans data-target
-────────────────────────────────────────── */
+/*  COMPTEURS ANIMÉS
+   */
 
 /**
  * Anime un compteur de 0 à `target` en `duration` ms
@@ -43,7 +37,7 @@ function animateCounter(el, target, duration = 1400) {
       el.textContent = Math.floor(currentValue);
       requestAnimationFrame(tick);
     } else {
-      el.textContent = target; // valeur exacte à la fin
+      el.textContent = target; 
     }
   };
 
@@ -59,7 +53,7 @@ const counterObserver = new IntersectionObserver(
       const target = parseInt(el.dataset.target, 10);
 
       animateCounter(el, target);
-      counterObserver.unobserve(el); // déclenché une seule fois
+      counterObserver.unobserve(el); // déclenché une et une  seule fois
     });
   },
   { threshold: 0.5 }
@@ -69,11 +63,8 @@ document.querySelectorAll("[data-target]").forEach((el) =>
   counterObserver.observe(el)
 );
 
-/* ──────────────────────────────────────────
-   3. ACCORDÉON FAQ
-   Ouvre / ferme les réponses au clic,
-   en fermant l'item précédemment ouvert
-────────────────────────────────────────── */
+/*  ACCORDÉON FAQ
+    */
 document.querySelectorAll(".faq-question").forEach((btn) => {
   btn.addEventListener("click", () => {
     const clickedItem = btn.closest(".faq-item");
