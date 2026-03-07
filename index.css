@@ -1,16 +1,8 @@
-/* ══════════════════════════════════════════════════════════════
-   accueil.css — Styles de la page d'accueil HelpDesk
-   Structure : helpdesk/
-               ├── index.html
-               ├── accueil.css
-               ├── accueil.js
-               └── images/
-                   └── Logo.jpeg
-══════════════════════════════════════════════════════════════ */
 
-/* ──────────────────────────────────────────
-   1. RESET & VARIABLES CSS
-────────────────────────────────────────── */
+
+/*
+  RESET & VARIABLES CSS
+*/
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -36,7 +28,7 @@
   --grey-700:       #4a3f4a;
   --text:           #2b1f2b;
 
-  /* Utilitaires */
+  /* Utiles */
   --radius:         14px;
   --shadow-sm:      0 2px 8px rgba(93, 38, 93, 0.10);
   --shadow-md:      0 6px 24px rgba(93, 38, 93, 0.15);
@@ -54,9 +46,9 @@ body {
   min-height: 100vh;
 }
 
-/* ──────────────────────────────────────────
-   2. FOND GÉOMÉTRIQUE (style page login)
-────────────────────────────────────────── */
+/* 
+FOND GÉOMÉTRIQUE (style)
+ */
 .geo-bg {
   position: fixed;
   inset: 0;
@@ -77,9 +69,9 @@ body {
   height: 100%;
 }
 
-/* ──────────────────────────────────────────
-   3. BARRE DE NAVIGATION
-────────────────────────────────────────── */
+/* 
+    BARRE DE NAVIGATION
+ */
 nav {
   position: fixed;
   top: 0;
@@ -190,17 +182,17 @@ nav {
   transform: translateY(-2px);
 }
 
-/* ──────────────────────────────────────────
-   5. STRUCTURE DE PAGE
-────────────────────────────────────────── */
+/* 
+   5. STRUCTURE DE la Page
+ */
 .page {
   padding-top: 64px;
   min-height: 100vh;
 }
 
-/* ──────────────────────────────────────────
-   6. SECTION HERO
-────────────────────────────────────────── */
+/* 
+    SECTION HERO
+─ */
 .hero {
   min-height: calc(100vh - 64px);
   display: flex;
@@ -285,9 +277,8 @@ nav {
   border-radius: 10px;
 }
 
-/* ──────────────────────────────────────────
-   7. STATISTIQUES ANIMÉES (hero)
-────────────────────────────────────────── */
+/*  ANIMATIONS STATISTIQUES (hero)
+ */
 .hero-stats {
   display: flex;
   justify-content: center;
@@ -313,9 +304,8 @@ nav {
   margin-top: 0.2rem;
 }
 
-/* ──────────────────────────────────────────
-   8. FEATURES (hero)
-────────────────────────────────────────── */
+/*  Features (hero)
+*/
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -356,9 +346,8 @@ nav {
   line-height: 1.4;
 }
 
-/* ──────────────────────────────────────────
-   9. EN-TÊTES DE SECTION
-────────────────────────────────────────── */
+/*  entetes de SECTION
+ */
 .landing-extra {
   padding: 0 2rem 4rem;
 }
@@ -391,9 +380,8 @@ nav {
   font-size: 0.92rem;
 }
 
-/* ──────────────────────────────────────────
-   10. SECTION "COMMENT ÇA MARCHE"
-────────────────────────────────────────── */
+/*  Section de "COMMENT ÇA MARCHE"
+ */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
@@ -460,9 +448,8 @@ nav {
   line-height: 1.45;
 }
 
-/* ──────────────────────────────────────────
-   11. SECTION FAQ
-────────────────────────────────────────── */
+/*  FAQ
+ */
 .faq-list {
   max-width: 680px;
   margin: 0 auto;
@@ -540,9 +527,8 @@ nav {
   padding: 0.1rem 1.3rem 1rem;
 }
 
-/* ──────────────────────────────────────────
-   12. BANNIÈRE CTA
-────────────────────────────────────────── */
+/*  BANNIÈRE CTA
+*/
 .cta-bottom {
   background: linear-gradient(
     135deg,
@@ -585,9 +571,8 @@ nav {
   margin-right: auto;
 }
 
-/* ──────────────────────────────────────────
-   13. FOOTER
-────────────────────────────────────────── */
+/*  FOOTER
+ */
 footer {
   background: var(--primary-dark);
   color: rgba(255, 255, 255, 0.52);
@@ -619,9 +604,8 @@ footer a:hover {
   transform: translateY(0);
 }
 
-/* ──────────────────────────────────────────
-   15. RESPONSIVE
-────────────────────────────────────────── */
+/*  Reponses
+*/
 @media (max-width: 768px) {
   nav {
     padding: 0 1.2rem;
