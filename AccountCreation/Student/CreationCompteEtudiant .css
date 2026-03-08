@@ -234,14 +234,14 @@ a:hover{
 
 .valid_requirement{
     color : var(--correct-color);
-    list-style-type: '✅';
+    list-style-type: '✔';
 
 }
 
 
 .invalid_requirement{
     color :var(--error-color);
-    list-style-type: '❌';
+    list-style-type: '✘';
 }
 
 
