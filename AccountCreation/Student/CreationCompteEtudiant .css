@@ -127,8 +127,10 @@ input:focus , input:hover  {
 
 p{
     font-size: 11px;
+
     padding-left: 5px;
     margin: -6px 0px;
+    margin-left : 3rem;
 }
 
 #passwordError{
@@ -136,7 +138,7 @@ p{
 }
 
 #birthdayError{
-    margin-left: 8.3rem;
+    margin-left: 11.2   rem;
 }
 
 ul{
