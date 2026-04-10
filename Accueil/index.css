@@ -89,18 +89,65 @@ nav {
   box-shadow: var(--shadow-sm);
 }
 
+/* Le petit carré violet avec le H */
+/*
+.logo-box {
+    background: var(--primary);  
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 900;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(93, 38, 93, 0.2);
+}
+*/
+.logo-svg {
+  color: var(--primary);
+  filter: drop-shadow(0 2px 6px rgba(93, 38, 93, 0.25));
+  transition: transform var(--transition);
+}
+
+.nav-logo:hover .logo-svg {
+  transform: scale(1.08);
+}
+
+
+
+
+/* Le texte "HelpDesk" */
+.logo-text {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #333; /* Ou ta couleur de texte sombre */
+    letter-spacing: -0.5px;
+}
+
+/* Le "Desk" en violet */
+.logo-text span {
+    color: var(--primary);
+}
+
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  /*gap: 2.5rem;*/
+  gap: 10px;
   text-decoration: none;
-  color: var(--primary);
+  /*color: var(--primary);*/
 }
 
-.nav-logo img {
+
+/*.nav-logo img {
   height: 38px;
   width: auto;
-}
+}*/
+
 
 .nav-right {
   display: flex;
@@ -114,6 +161,8 @@ nav {
   color: var(--grey-700);
   padding: 0.42rem 0.85rem;
   border-radius: 8px;
+  border-bottom:none;
+  outline: none;
   font-size: 0.88rem;
   white-space: nowrap;
   transition: background var(--transition), color var(--transition);
