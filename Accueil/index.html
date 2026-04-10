@@ -3,7 +3,7 @@
 <html lang="fr">
 
 <!-- ════════════════════════════════════════════════════════════
-     HEAD — Métadonnées, polices et feuille de style
+     HEAD — les métadonnées, polices et la feuille de style
 ════════════════════════════════════════════════════════════ -->
 <head>
   <meta charset="UTF-8" />
@@ -11,7 +11,7 @@
   <meta name="description" content="HelpDesk — Plateforme de support de cours entre étudiants et tuteurs." />
   <title>HelpDesk — Accueil</title>
 
-  <!-- Google Fonts -->
+  <!-- Googgle Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -23,9 +23,7 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 
-<!-- ════════════════════════════════════════════════════════════
-     BODY
-═════════════════════════════════════════════════════
+
 <body>
 
   <!-- ════════════════════════════════════════
@@ -61,7 +59,7 @@
       <img src="images/logo.jpeg" alt="Logo HelpDesk" />
     </a>
 
-    <!-- Liens de navigation -->
+    <!-- Liens de navigation page d accueil avant connexion ou inscription-->
     <div class="nav-right">
       <a href="#comment-ca-marche" class="nav-link">Fonctionnement</a>
       <a href="#roles">Rôles</a>
@@ -71,14 +69,10 @@
     </div>
   </nav>
 
-  <!-- ════════════════════════════════════════
-       CONTENU PRINCIPAL
-  ════════════════════════════════════════ -->
+  <!--CONTENU PRINCIPAL -->
   <main class="page">
 
-    <!-- ──────────────────────────────────────
-         SECTION HERO
-    ────────────────────────────────────── -->
+    <!-- SECTION HERO -->
     <section class="hero" aria-label="Présentation">
       <div class="hero-card">
 
@@ -93,7 +87,7 @@
           <span>obtenez des réponses</span>
         </h1>
 
-        <!-- Accroche -->
+        <!-- mot d 'accroche -->
         <p>
           HelpDesk facilite la communication entre étudiants et tuteurs.
           Créez des tickets, suivez leur avancement et résolvez vos problèmes rapidement.
@@ -102,7 +96,7 @@
         <!-- Boutons d'action -->
         <div class="hero-actions">
           <a href="CréationCompteEtudiant.html" class="btn btn-primary">
-            <!-- Icône + -->
+            <!--icône-->
             <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
               <path d="M12 5v14M5 12h14" />
             </svg>
@@ -134,7 +128,7 @@
             <div class="hstat-l">% satisfaction</div>
           </div>
 
-        </div><!-- /hero-stats -->
+        </div>
 
         <!-- Points forts -->
         <div class="features">
@@ -169,15 +163,13 @@
             <p>Tuteurs disponibles en temps réel.</p>
           </div>
 
-        </div><!-- /features -->
+        </div>
 
-      </div><!-- /hero-card -->
-    </section><!-- /hero -->
+      </div>
+    </section>
 
 
-    <!-- ──────────────────────────────────────
-         SECTION "COMMENT ÇA MARCHE"
-    ────────────────────────────────────── -->
+    <!--SECTION "COMMENT ÇA MARCHE" -->
     <div class="landing-extra">
 
       <div id="comment-ca-marche" class="section-header appear">
@@ -212,7 +204,7 @@
           <p>Le tuteur clôt le ticket. Problème réglé !</p>
         </div>
 
-      </div><!-- /steps-grid -->
+      </div>
          
          <!-- ═══════════ ROLES ═══════════ -->
   <section id="roles" class="roles">
@@ -256,9 +248,7 @@
   </section>
 
 
-      <!-- ──────────────────────────────────────
-           SECTION FAQ
-      ────────────────────────────────────── -->
+      <!--SECTION FAQ-->
       <div id="faq" class="section-header appear">
         <span class="section-label">FAQ</span>
         <h2>Questions fréquentes</h2>
@@ -329,46 +319,41 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-answer">
-            Oui. La plateforme applique une protection XSS, une validation
+            Oui. La plateforme applique une protection, une validation
             des données côté serveur et un contrôle d'accès strict selon
             votre rôle (étudiant ou tuteur).
           </div>
         </div>
 
-      </div><!-- /faq-list -->
+      </div>
 
 
-      <!-- ──────────────────────────────────────
-           BANNIÈRE CTA
-      ────────────────────────────────────── -->
+      <!-- notre banniere CTA-->
       <div class="cta-bottom appear">
         <h2>Prêt à poser votre première question ?</h2>
         <p>
           Rejoignez la plateforme et obtenez de l'aide
           de vos tuteurs en quelques minutes.
         </p>
-        <a href="CréationCompteEtudiant.html" class="btn btn-white">
+        <a href="CreationCompteEtudiant.html" class="btn btn-white">
           Créer mon comptte
         </a>
       </div>
 
-    </div><!-- /landing-extra -->
+    </div>
 
-  </main><!-- /page -->
+  </main>
 
 
-  <!-- ════════════════════════════════════════
-       PIED DE PAGE
-  ════════════════════════════════════════ -->
+  <!-- PIED DE PAGE -->
   <footer>
     <p>
       &copy; 2026 HelpDesk &nbsp;|&nbsp;
       <a href="login.html">Connexion</a> &nbsp;|&nbsp;
-      <a href="CréationCompteEtudiant.html">Inscription</a>
+      <a href="CreationCompteEtudiant.html">Inscription</a>
     </p>
   </footer>
 
-  <!-- Script (chargé en fin de body pour les performances) -->
   <script src="index.js"></script>
 
 </body>
