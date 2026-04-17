@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HelpDesk — Tableau de bord</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Idiqlat:wght@200;300;400&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <div class="geo-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,0 420,0 210,310"         fill="#7a5c9a" opacity=".14"/>
+      <polygon points="1440,0 1080,0 1310,290"     fill="#5d265d" opacity=".12"/>
+      <polygon points="0,900 360,610 0,510"         fill="#5d265d" opacity=".11"/>
+      <polygon points="1440,900 1090,710 1440,510"  fill="#9060a0" opacity=".13"/>
+      <polygon points="580,0 920,0 760,230"          fill="#8040a0" opacity=".09"/>
+      <polygon points="190,900 610,900 400,660"      fill="#6a3070" opacity=".10"/>
+      <polygon points="880,900 1220,900 1100,690"    fill="#5d265d" opacity=".10"/>
+      <polygon points="380,0 710,160 540,0"           fill="#b080c8" opacity=".08"/>
+      <polygon points="1060,410 1320,210 1440,460"   fill="#7a3a7a" opacity=".09"/>
+      <polygon points="0,360 260,210 110,510"         fill="#9070b0" opacity=".08"/>
+    </svg>
+  </div>
+
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <svg class="logo-svg" width="36" height="40" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 4 L74 18 L74 52 Q74 72 40 86 Q6 72 6 52 L6 18 Z" fill="#5d265d"/>
+        <rect x="22" y="36" width="36" height="8" fill="white"/>
+        <rect x="22" y="26" width="10" height="32" fill="white"/>
+        <rect x="48" y="26" width="10" height="32" fill="white"/>
+        <rect x="35" y="54" width="10" height="10" fill="#5d265d"/>
+      </svg>
+      <span class="logo-text">Help<span>Desk</span></span>
+    </a>
+
+    <div class="nav-right">
+      <div class="user-info">
+        <div class="user-avatar" id="user-avatar">JD</div>
+        <span class="user-name" id="user-display-name" style="cursor: pointer;" onclick="window.location.href='profil.html'">Jean Dupont</span>
+        <span class="role-badge" id="role-badge">Étudiant</span>
+      </div>
+      <a href="logout.php" class="btn btn-outline btn-sm">Déconnexion</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="dashboard-wrap">
+      <section class="main-area">
+
+        <div class="action-bar">
+          <div style="margin-left:auto; display:flex; gap:0.5rem; align-items:center;">
+            <div class="tab-nav">
+              <button class="tab-btn active" id="tab-all">Tous les tickets</button>
+              <a href="tickets.html" class="tab-btn" id="tab-mine">Mes tickets</a>
+            </div>
+            <a href="creationticket.html" class="btn btn-primary btn-sm">Nouveau ticket</a>
+          </div>
+        </div>
+
+        <div class="section-top">
+          <h2 id="section-title">Tous les tickets</h2>
+        </div>
+
+        <div class="filter-bar">
+          <span class="filter-label">Statut</span>
+          <div class="filter-group" id="filter-status">
+            <button class="filter-chip active" data-value="tous">Tous</button>
+            <button class="filter-chip" data-value="Ouvert">Ouvert</button>
+            <button class="filter-chip" data-value="En cours">En cours</button>
+            <button class="filter-chip" data-value="Résolu">Résolu</button>
+          </div>
+
+          <span class="filter-label" style="margin-left:.5rem">Priorité</span>
+          <div class="filter-group" id="filter-priority">
+            <button class="filter-chip active" data-value="tous">Toutes</button>
+            <button class="filter-chip" data-value="Haute">Haute</button>
+            <button class="filter-chip" data-value="Moyenne">Moyenne</button>
+            <button class="filter-chip" data-value="Basse">Basse</button>
+          </div>
+
+          <div class="filter-search">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+            </svg>
+            <input type="text" placeholder="Rechercher…" id="search-input"/>
+          </div>
+        </div>
+
+        <div class="tickets-list" id="tickets-list"></div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 HelpDesk &nbsp;|&nbsp;
+      <a href="index.html">Accueil</a> &nbsp;|&nbsp;
+      <a href="logout.php">Déconnexion</a>
+    </p>
+  </footer>
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>
