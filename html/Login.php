@@ -90,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <footer class="login-footer">
             <p>Besoin d'aide ? Contactez un tuteur.</p>
+            <p>Pas de compte ? <a href="AccountCreation/CreationCompte.html">S'inscrire</a></p>
         </footer>
     </div>
 
