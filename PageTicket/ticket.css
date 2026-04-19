@@ -1,0 +1,238 @@
+/* --- 1. VARIABLES ET BASE --- */
+:root {
+    --violet-main: #6a1b9a;      /* Le violet de ton logo */
+    --violet-light: #f3e5f5;    /* Pour les fonds de commentaires tuteur */
+    --text-dark: #2d3436;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style du logo */
+.logo {
+    margin-left:1000px;
+    height: 100px; 
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Le logo grossit légèrement quand on passe la souris dessus */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #789fc6; 
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*Carte principale*/
+main {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+
+/* Header et liens */
+header {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background: var(--violet-main); /* On appelle la variable de couleur */
+}
+
+
+/* Haut du ticket */
+.haut_ticket {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.ticket_id {
+    color: var(--violet-main);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+h1 {
+    margin: 10px 0;
+    color: var(--violet-main);
+    font-size: 2em;
+}
+
+h3 {
+    color: #556b2f;
+}
+
+.auteur_ticket {
+    font-size: 0.9em;
+    color: #636e72;
+    margin-bottom: 20px;
+}
+
+/* Badges dynamiques */
+.ticket-badge {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ticket-badge span {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    background: #b2bec3; /* Couleur par défaut */
+}
+
+
+.ticket-badge .badge_type {  background-color: #636e72; color: white;}
+
+/* Priorités */
+.ticket-badge .badge_priorite-haute { background-color: #d63031;  color: white;}
+
+.ticket-badge .badge_priorite-moyenne { background-color: #fdcb6e; color: #2d3436; 
+}
+
+.ticket-badge .badge_priorite-basse {  background-color: #00b894; color: white;
+}
+
+/* Statuts */
+.ticket-badge .badge_statut-ouvert { background-color: #E74C3C; color: white;
+}
+
+.ticket-badge .badge_statut-en-cours { background-color: #0984e3; color: white;
+}
+
+.ticket-badge .badge_statut-résolu { background-color: #2d3436;   color: white;
+}
+
+
+/* Description du ticket */
+.content_ticket {
+    margin-bottom: 40px;
+}
+
+.description_ticket {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--violet-main);
+}
+
+/* Actions du tuteur */
+.tuteur_actions {
+    background: var(--violet-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.tuteur_actions select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+.tuteur_actions button {
+    background: var(--violet-main);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Commentaires */
+.comments_section h2 {
+    border-bottom: 2px solid #556b2f;
+    padding-bottom: 10px;
+    color: #556b2f;
+   
+}
+
+.comment {
+    background: #f1f2f6;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.comment-tuteur {
+    background: var(--violet-light);
+    border-right: 4px solid var(--violet-main);
+}
+
+.comment_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #636e72;
+    margin-bottom: 10px;
+}
+
+/* Formulaire de réponse */
+.comment-form {
+    margin-top: 30px;
+}
+
+textarea {
+    width: 82%;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: inherit;
+    resize: vertical;
+}
+
+textarea:focus {
+    border-color: var(--violet-main);
+    outline: none;
+}
+
+.comment-form button {
+    background: var(--violet-main);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    float: right;
+    transition: 0.3s;
+}
+
+.comment-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 27, 154, 0.3);
+}
