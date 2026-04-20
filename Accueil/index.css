@@ -721,28 +721,46 @@ footer a:hover {
   transform: translateY(0);
 }
 
-/*  Reponses
-*/
+
+/* --- RESPONSIVE ACCUEIL --- */
 @media (max-width: 768px) {
+  /* Navigation : On cache les liens secondaires pour ne garder que l'essentiel */
+  nav .nav-link {
+    display: none; 
+  }
+  
   nav {
-    padding: 0 1.2rem;
+    padding: 0 1rem;
   }
 
-  .nav-right .nav-link {
-    display: none;
+  /* Hero Section : On réduit les textes pour qu'ils ne débordent pas */
+  .hero h1 {
+    font-size: 1.8rem;
   }
-}
 
-@media (max-width: 480px) {
   .hero-card {
-    padding: 2rem 1.3rem;
+    padding: 2rem 1rem;
+    margin: 1rem;
   }
 
-  .landing-extra {
-    padding: 0 1rem 3rem;
+  /* Grilles : On passe de plusieurs colonnes à 1 seule colonne */
+  .features, .steps-grid, .roles-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
   }
 
-  .cta-bottom {
-    border-radius: 14px;
+  /* Stats : On les met 2 par 2 */
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Boutons : Ils prennent toute la largeur pour cliquer plus facilement avec le pouce */
+  .hero-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
