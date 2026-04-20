@@ -454,9 +454,68 @@ footer {
 footer a { color: var(--accent); text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 
-@media (max-width: 640px) {
-  nav { padding: 0 1.2rem; }
-  .ticket-card { grid-template-columns: auto 1fr auto; }
-  .ticket-right .prio-badge { display: none; }
-  .filter-search { display: none; }
+/* --- RESPONSIVE DASHBOARD --- */
+@media (max-width: 768px) {
+  /* On réduit les marges globales */
+  .dashboard-wrap {
+    padding: 1rem;
+  }
+
+  /* Barre d'action (Nouveau ticket / Onglets) */
+  .action-bar > div {
+    flex-direction: column-reverse; /* Bouton Nouveau Ticket en haut */
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .tab-nav {
+    width: 100%;
+    display: flex;
+  }
+
+  .tab-btn {
+    flex: 1; /* Les onglets partagent la largeur équitablement */
+    text-align: center;
+  }
+
+  /* Filtres : On les empile pour qu'ils restent lisibles */
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .filter-group {
+    justify-content: flex-start;
+    overflow-x: auto; /* Permet de swiper les filtres s'ils sont trop longs */
+    padding-bottom: 5px;
+  }
+
+  .filter-search {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .filter-search input {
+    width: 100% !important;
+  }
+
+  /* Cartes de tickets : On réorganise le contenu */
+  .ticket-card {
+    grid-template-columns: 1fr; /* Tout sur une colonne */
+    gap: 0.5rem;
+  }
+
+  .ticket-right {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 0.5rem;
+  }
+
+  /* Masquer les infos de l'utilisateur dans la nav pour gagner de la place */
+  .user-name, .role-badge {
+    display: none;
+  }
 }
