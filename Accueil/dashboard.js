@@ -109,4 +109,18 @@ function formatDate(dateStr) {
   return d.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
 }
 
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  const filterBar = document.querySelector(".filter-bar");
+  
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    filterBar.style.transform = "translateY(-10px)";
+    filterBar.style.opacity = "0.8";
+  } else {
+    filterBar.style.transform = "translateY(0)";
+    filterBar.style.opacity = "1";
+  }
+  lastScroll = currentScroll;
+});
 init();
