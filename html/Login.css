@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --purple: #7B3FA0;
+    --purple-light: #9B55C0;
+    --purple-dark: #5d265d;
+    --teal: #5bbcb0;
+    --bg-overlay: rgba(20, 15, 35, 0.55);
+    --card-bg: rgba(255, 255, 255, 0.10);
+    --card-border: rgba(155, 85, 192, 0.25);
+    --input-bg: rgba(255, 255, 255, 0.08);
+    --input-border: rgba(155, 85, 192, 0.2);
+    --text-primary: #ffffff;
+    --text-muted: rgba(255,255,255,0.55);
+    --label: rgba(255,255,255,0.75);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../AccountCreation/Student/Images/Background_Image.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: var(--bg-overlay);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+.btn-back {
+    position: fixed;
+    top: 28px;
+    left: 28px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 10;
+    transition: background 0.2s;
+}
+.btn-back:hover { background: rgba(255,255,255,0.16); }
+
+.login-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 460px;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 10px;
+}
+
+.logo-h img {
+    width: 190px;
+    height: 230px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 4px 16px rgba(123,63,160,0.5));
+}
+
+.logo-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-style: italic;
+    letter-spacing: -0.3px;
+}
+
+.logo-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: -4px;
+}
+
+.login-card {
+    width: 100%;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid var(--card-border);
+    padding: 36px 32px 32px;
+    box-shadow:
+        0 8px 32px rgba(93, 38, 93, 0.25),
+        0 2px 8px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+fieldset { border: none; padding: 0; margin: 0; }
+
+.form-group { margin-bottom: 20px; }
+
+.form-group label,
+.label-row label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--label);
+    margin-bottom: 8px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.forgot-pwd {
+    font-size: 13px;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: color 0.2s;
+}
+.forgot-pwd:hover { color: #7eddd6; }
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 14px;
+    font-family: 'Sora', sans-serif;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+input::placeholder { color: rgba(255,255,255,0.25); }
+
+input:focus {
+    border-color: rgba(155, 85, 192, 0.6);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 0 3px rgba(123,63,160,0.18);
+}
+
+.input-with-icon { position: relative; }
+.input-with-icon input { padding-right: 48px; }
+
+.eye-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.45;
+    user-select: none;
+    transition: opacity 0.2s;
+}
+.eye-icon:hover { opacity: 0.9; }
+
+.form-options {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 26px;
+    margin-top: 6px;
+}
+
+.switch-text { font-size: 13px; color: var(--text-muted); }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: rgba(255,255,255,0.12);
+    border-radius: 34px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: background 0.3s;
+}
+.slider::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 2px;
+    bottom: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+.switch input:checked + .slider { background: var(--purple); border-color: var(--purple-light); }
+.switch input:checked + .slider::before { transform: translateX(20px); }
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(93, 38, 93, 0.45);
+}
+.btn-submit:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(93, 38, 93, 0.55);
+}
+.btn-submit:active { transform: translateY(0); }
+
+.arrow { font-size: 16px; }
+
+.login-footer { margin-top: 20px; text-align: center; }
+.login-footer p { font-size: 12px; color: rgba(255,255,255,0.35); }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ticket.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="page">
+    <div class="formulaire">
+        
+        <h1>Création d'un ticket </h1>
+        <form method="post" action="ticket.php">
+            
+            <label for="prenom" >Email : </label>
+            <input type="email" name="mail" id="mail"><br><br>
+            <label for="objet">Objet : </label>
+            <input type="text" name="objet" id="objet"><br><br>  
+            <textarea name="message" rows="15" cols="50" 
+            placeholder="Écris ton message ici..."></textarea> <br><br>
+            <button type="submit">Envoyer</button>
+        </form> 
+    </div>
+    <div>
+        <div class="annuaire">
+        
+            <h1>Annuaire</h1><br> 
+            <div class="scroll-pane">
+                <ul>
+                    <li class="nom">Salamata Goulo BAH</li>
+                    <li class="nom">Hadja Aminata BARRY</li>
+                    <li class="nom">Yousef FAWAL</li>
+                    <li class="nom prof">Lylia ABROUK</li>
+                    <li class="nom prof">Anabelle GILLET</li>
+                    <li class="nom prof">Eric LECLERCQ</li>
+                    <li>Élément 7</li>
+                    <li>Élément 8</li>
+                    <li>Élément 9</li>
+                    <li>Élément 10</li>
+                </ul>
+            </div>
+        
+        </div>
+        <div id="contacts">
+            <div id="contact"></div>
+        </div>
+    </div>
+    <script src="ticket.js"></script>
+</body>
+
+</html>

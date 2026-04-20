@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+}
+
+/* Conteneur global */
+.page {
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Carte formulaire */
+.formulaire {
+  background: white;
+  padding: 30px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Carte annuaire */
+.annuaire {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Champs */
+.formulaire input,
+.formulaire textarea,
+.formulaire select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Bouton envoyer */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #27ae60;
+}
+
+/* Contacts annuaire */
+#contact {
+  display: flex;
+  flex-direction: column; /* 👈 IMPORTANT */
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fafafa;
+}
+#contacts {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.scroll-pane {
+  width: 250px;
+  height: 150px;       /* taille fixe => active le scroll */
+  border: 1px solid #ccc;
+  overflow-y: auto;    /* scroll vertical */
+  overflow-x: hidden;  /* pas de scroll horizontal */
+  padding: 5px;
+}
+
+.scroll-pane ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scroll-pane li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.scroll-pane li:hover {
+  background-color: #eee;
+}
